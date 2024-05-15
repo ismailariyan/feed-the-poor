@@ -34,10 +34,12 @@ if($_SESSION['name']==''){
         </div>
         <nav class="nav-bar">
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html" >About</a></li>
-                <li><a href="contact.html"  >Contact</a></li>
-                <li><a href="profile.php"  class="active">Profile</a></li>
+            <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="campaign.html">Campaign</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+          <li><a href="profile.php">Profile</a></li>
             </ul>
         </nav>
     </header>
@@ -61,7 +63,7 @@ if($_SESSION['name']==''){
      -->
         <div class="profilebox" style="">
           
-            <p class="headingline" style="text-align: left;font-size:30px;"> <img src="" alt="" style="width:40px; height:  height: 25px;; padding-right: 10px; position: relative;" >Profile</p>
+            <p class="headingline" style="text-align: left;font-size:30px;"> <img src="" alt="" style="width:40px; height:  height:25px;; padding-right:10px; position: relative;" >Profile</p>
 <!--             
             <img src="user.png" alt="" style="  width: 90px;
             height: 90px;

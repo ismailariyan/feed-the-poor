@@ -67,7 +67,7 @@ if(isset($_POST['signup']))
     
     <div class="container">
         <div class="forms">
-            <p style="color:"></p>
+            <p style="color: #06C167"></p>
             <div class="form login">
                 <?php
                 if($msg==1){

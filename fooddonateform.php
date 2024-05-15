@@ -1,4 +1,9 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+$message="khabar khaiya mor";
+
 include("login.php"); 
 if($_SESSION['name']==''){
 	header("location: signin.php");
@@ -18,24 +23,59 @@ if(isset($_POST['submit']))
     $district=mysqli_real_escape_string($connection, $_POST['district']);
     $address=mysqli_real_escape_string($connection, $_POST['address']);
     $name=mysqli_real_escape_string($connection, $_POST['name']);
+ 
+ 
+    $query="insert into food_donations(email,food,type,category,phoneno,location,address,name,quantity) values('$emailid','$foodname','$meal','$category','$phoneno','$district','$address','$name','$quantity')";
+    
+    $query_run= mysqli_query($connection, $query);
   
+      require 'PHPMailer/Exception.php';
+      require 'PHPMailer/PHPMailer.php';
+      require 'PHPMailer/SMTP.php';
+      $mail = new PHPMailer(true);
 
+try {
+    //Server settings
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'obito.uchiha1184@gmail.com';                     //SMTP username
+    $mail->Password   = 'mdgn iana dpuo bbns';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+    //sender
+    $mail->setFrom('obito.uchiha1184@gmail.com', 'webProject'); //ae khane file ar directory
+//receiver
+    $mail->addAddress($emailid, 'amr website');     //Add a recipient
  
 
+    // //Attachments
+    // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
-
-    $query="insert into food_donations(email,food,type,category,phoneno,location,address,name,quantity) values('$emailid','$foodname','$meal','$category','$phoneno','$district','$address','$name','$quantity')";
-    $query_run= mysqli_query($connection, $query);
-    if($query_run)
-    {
-
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Food Donation';
+    $mail->Body    = 'I hate S.A.M  with every fiber of my being.I hope he dies a miserable death.I want him to go to the deepest and darkest boiler of hell.
+    I hope  he dies slowly';
+   
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+     
+       
         echo '<script type="text/javascript">alert("data saved")</script>';
         header("location:delivery.html");
+        
     }
-    else{
-        echo '<script type="text/javascript">alert("data not saved")</script>';
-    }
-}
+
+    
+    
+
 ?>
 
 
@@ -107,7 +147,7 @@ if(isset($_POST['submit']))
       </div>
       <div>
         <label for="phoneno" >PhoneNo:</label>
-      <input type="text" id="phoneno" name="phoneno" maxlength="10" pattern="[0-9]{10}" required />
+      <input type="text" id="phoneno" name="phoneno" maxlength="13"  required />
         
       </div>
       </div>
@@ -115,72 +155,33 @@ if(isset($_POST['submit']))
         <label for="location"></label>
         <label for="district">District:</label>
 <select id="district" name="district" style="padding:10px;">
-  <option value="bagerhat">Bagerhat</option>
-  <option value="bandarban">Bandarban</option>
-  <option value="barguna">Barguna</option>
-  <option value="barisal">Barisal</option>
-  <option value="bhola">Bhola</option>
-  <option value="bogra">Bogra</option>
-  <option value="brahmanbaria">Brahmanbaria</option>
-  <option value="chandpur">Chandpur</option>
-  <option value="chapainawabganj">Chapainawabganj</option>
-  <option value="chittagong">Chittagong</option>
-  <option value="chuadanga">Chuadanga</option>
-  <option value="comilla">Comilla</option>
-  <option value="coxsbazar">Cox's Bazar</option>
-  <option value="dhaka">Dhaka</option>
-  <option value="dinajpur">Dinajpur</option>
-  <option value="faridpur">Faridpur</option>
-  <option value="feni">Feni</option>
-  <option value="gaibandha">Gaibandha</option>
-  <option value="gazipur">Gazipur</option>
-  <option value="gopalganj">Gopalganj</option>
-  <option value="habiganj">Habiganj</option>
-  <option value="jamalpur">Jamalpur</option>
-  <option value="jessore">Jessore</option>
-  <option value="jhalokati">Jhalokati</option>
-  <option value="jhenaidah">Jhenaidah</option>
-  <option value="joypurhat">Joypurhat</option>
-  <option value="khagrachhari">Khagrachhari</option>
-  <option value="khulna">Khulna</option>
-  <option value="kishoreganj">Kishoreganj</option>
-  <option value="kurigram">Kurigram</option>
-  <option value="kushtia">Kushtia</option>
-  <option value="lakshmipur">Lakshmipur</option>
-  <option value="lalmonirhat">Lalmonirhat</option>
-  <option value="madaripur">Madaripur</option>
-  <option value="magura">Magura</option>
-  <option value="manikganj">Manikganj</option>
-  <option value="meherpur">Meherpur</option>
-  <option value="moulvibazar">Moulvibazar</option>
-  <option value="munshiganj">Munshiganj</option>
-  <option value="mymensingh">Mymensingh</option>
-  <option value="naogaon">Naogaon</option>
-  <option value="narail">Narail</option>
-  <option value="narayanganj">Narayanganj</option>
-  <option value="narsingdi">Narsingdi</option>
-  <option value="natore">Natore</option>
-  <option value="netrokona">Netrokona</option>
-  <option value="nilphamari">Nilphamari</option>
-  <option value="noakhali">Noakhali</option>
-  <option value="norail">Norail</option>
-  <option value="pabna">Pabna</option>
-  <option value="panchagarh">Panchagarh</option>
-  <option value="patuakhali">Patuakhali</option>
-  <option value="pirojpur">Pirojpur</option>
-  <option value="rajbari">Rajbari</option>
-  <option value="rajshahi">Rajshahi</option>
-  <option value="rangamati">Rangamati</option>
-  <option value="rangpur">Rangpur</option>
-  <option value="satkhira">Satkhira</option>
-  <option value="shariatpur">Shariatpur</option>
-  <option value="sherpur">Sherpur</option>
-  <option value="sirajganj">Sirajganj</option>
-  <option value="sunamganj">Sunamganj</option>
-  <option value="sylhet">Sylhet</option>
-  <option value="tangail">Tangail</option>
-  <option value="thakurgaon">Thakurgaon</option>
-</select>
+  <option value="chennai">Chennai</option>
+  <option value="kancheepuram">Kancheepuram</option>
+  <option value="thiruvallur">Thiruvallur</option>
+  <option value="vellore">Vellore</option>
+  <option value="tiruvannamalai">Tiruvannamalai</option>
+  <option value="tiruvallur">Tiruvallur</option>
+  <option value="tiruppur">Tiruppur</option>
+  <option value="coimbatore">Coimbatore</option>
+  <option value="erode">Erode</option>
+  <option value="salem">Salem</option>
+  <option value="namakkal">Namakkal</option>
+  <option value="tiruchirappalli">Tiruchirappalli</option>
+  <option value="thanjavur">Thanjavur</option>
+  <option value="pudukkottai">Pudukkottai</option>
+  <option value="karur">Karur</option>
+  <option value="ariyalur">Ariyalur</option>
+  <option value="perambalur">Perambalur</option>
+  <option value="madurai" selected>Madurai</option>
+  <option value="virudhunagar">Virudhunagar</option>
+  <option value="dindigul">Dindigul</option>
+  <option value="ramanathapuram">Ramanathapuram</option>
+  <option value="sivaganga">Sivaganga</option>
+  <option value="thoothukkudi">Thoothukkudi</option>
+  <option value="tirunelveli">Tirunelveli</option>
+  <option value="tiruppur">Tiruppur</option>
+  <option value="tenkasi">Tenkasi</option>
+  <option value="kanniyakumari">Kanniyakumari</option>
 </select> 
 
         <label for="address" style="padding-left: 10px;">Address:</label>
