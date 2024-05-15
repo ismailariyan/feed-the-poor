@@ -1,8 +1,9 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-$message="khabar khaiya mor";
+
 
 include("login.php"); 
 if($_SESSION['name']==''){
@@ -12,10 +13,47 @@ if($_SESSION['name']==''){
 $emailid= $_SESSION['email'];
 $connection=mysqli_connect("localhost","root","");
 $db=mysqli_select_db($connection,'demo');
+
+
 if(isset($_POST['submit']))
 {
-    $foodname=mysqli_real_escape_string($connection, $_POST['foodname']);
-    $meal=mysqli_real_escape_string($connection, $_POST['meal']);
+    
+    
+    
+    
+    $q = "SELECT shirt_goal,pant_goal,sharee_goal,shirt_left,pant_left,sharee_left FROM cloth_storage";
+    $r = mysqli_query($connection, $q);
+    $shirt_goal;
+    $pant_goal;
+    $sharee_goal;
+    $shirt_left;
+    $pant_left;
+    $sharee_left;
+    // Check if the query was successful
+    if ($r) {
+        // Fetch a single row as an associative array
+        $row = mysqli_fetch_assoc($r);
+        
+        // Extract the value of 'shirt_goal' from the fetched row
+        $shirt_goal = $row['shirt_goal'];
+        $pant_goal = $row['pant_goal'];
+        $sharee_goal = $row['sharee_goal'];
+
+        $shirt_lef = $row['shirt_lef'];
+        $pant_left = $row['pant_left'];
+        $sharee_left = $row['sharee_left;'];
+        
+        // Free result set
+        mysqli_free_result($r);
+    } else {
+        // Handle query error
+        echo "Error: " . mysqli_error($connection);
+    }
+    
+    
+   
+    
+
     $category=$_POST['image-choice'];
     $quantity=mysqli_real_escape_string($connection, $_POST['quantity']);
     // $email=$_POST['email'];
@@ -23,9 +61,13 @@ if(isset($_POST['submit']))
     $district=mysqli_real_escape_string($connection, $_POST['district']);
     $address=mysqli_real_escape_string($connection, $_POST['address']);
     $name=mysqli_real_escape_string($connection, $_POST['name']);
- 
- 
-    $query="insert into food_donations(email,food,type,category,phoneno,location,address,name,quantity) values('$emailid','$foodname','$meal','$category','$phoneno','$district','$address','$name','$quantity')";
+    
+    if($category=="shirt"){
+        $shirt_left= $shirt_goal-$quantity;
+    }
+    
+  
+    $query="insert into cloth_donation(email,category,phoneno,location,address,name,quantity) values('$emailid','$category','$phoneno','$district','$address','$name','$shirt_left')";
     
     $query_run= mysqli_query($connection, $query);
   
@@ -82,6 +124,7 @@ try {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,15 +135,15 @@ try {
     <div class="container">
         <div class="regformf" >
     <form action="" method="post">
-        <p class="logo">Food <b style="color: #06C167; ">Donate</b></p>
+        <p class="logo">কাপড়  <b style="color: #06C167; ">দান</b></p>
         
-       <div class="input">
+       <!-- <div class="input">
         <label for="foodname"  > Food Name:</label>
         <input type="text" id="foodname" name="foodname" required/>
-        </div>
+        </div> -->
       
       
-        <div class="radio">
+        <!-- <div class="radio">
         <label for="meal" >Meal type :</label> 
         <br><br>
 
@@ -110,20 +153,20 @@ try {
         <label for="Non-veg">Non-veg</label>
     
         </div>
-        <br>
+        <br> -->
         <div class="input">
         <label for="food">Select the Category:</label>
         <br><br>
         <div class="image-radio-group">
-            <input type="radio" id="raw-food" name="image-choice" value="raw-food">
+            <input type="radio" id="raw-food" name="image-choice" value="shirt">
             <label for="raw-food">
               <img src="img/raw-food.png" alt="raw-food" >
             </label>
-            <input type="radio" id="cooked-food" name="image-choice" value="cooked-food"checked>
+            <input type="radio" id="cooked-food" name="image-choice" value="lungi"checked>
             <label for="cooked-food">
               <img src="img/cooked-food.png" alt="cooked-food" >
             </label>
-            <input type="radio" id="packed-food" name="image-choice" value="packed-food">
+            <input type="radio" id="packed-food" name="image-choice" value="Sharee">
             <label for="packed-food">
               <img src="img/packed-food.png" alt="packed-food" >
             </label>
@@ -132,10 +175,47 @@ try {
         <!-- <input type="text" id="food" name="food"> -->
         </div>
         <div class="input">
-        <label for="quantity">Quantity:(number of person /kg)</label>
-        <input type="text" id="quantity" name="quantity" required/>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required/>
+        
         </div>
        <b><p style="text-align: center;">Contact Details</p></b>
+        
+    <?php $q = "SELECT shirt_goal,pant_goal,sharee_goal,shirt_left,pant_left,sharee_left FROM cloth_storage";
+    $r = mysqli_query($connection, $q);
+    $shirt_goal;
+    $pant_goal;
+    $sharee_goal;
+    $shirt_left;
+    $pant_left;
+    $sharee_left;
+    
+    // Check if the query was successful
+    if ($r) {
+        // Fetch a single row as an associative array
+        $row = mysqli_fetch_assoc($r);
+        
+        // Extract the values from the fetched row
+        $shirt_goal = $row['shirt_goal'];
+        $pant_goal = $row['pant_goal'];
+        $sharee_goal = $row['sharee_goal'];
+    
+        $shirt_left = $row['shirt_left'];
+        $pant_left = $row['pant_left'];
+        $sharee_left = $row['sharee_left'];
+        // $category=$_POST['image-choice'];
+        
+        // Display the value inside a label tag
+       
+        // echo '<label for="sharee_left">' . '</label>';
+        
+        // Free result set
+        mysqli_free_result($r);
+    } else {
+        // Handle query error
+        echo "Error: " . mysqli_error($connection);
+    }
+    ?>
         <div class="input">
           <!-- <div>
       <label for="email">Email:</label>

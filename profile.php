@@ -103,9 +103,11 @@ if($_SESSION['name']==''){
         <thead>
         <tr>
             <th>food</th>
-            <th>Type</th>
-            <th>Category</th>
+            <!-- <th>Type</th>
+            <th>Category</th> -->
+
             <th>date/time</th>
+            <th>Quantity</th>
         </tr>
         </thead>
        <tbody>
@@ -117,7 +119,7 @@ if($_SESSION['name']==''){
         $result=mysqli_query($connection, $query);
         if($result==true){
             while($row=mysqli_fetch_assoc($result)){
-                echo "<tr><td>".$row['food']."</td><td>".$row['type']."</td><td>".$row['category']."</td><td>".$row['date']."</td></tr>";
+                echo "<tr><td>".$row['category']."</td><td>".$row['date']."</td><td>".$row['quantity']."</td></tr>";
 
              }
           }
