@@ -76,7 +76,7 @@ if (!$connection) {
     $pdf->SetFont('Arial', '', 12);
     $pdf->Cell(50, 10, "Customer Name:", 1);
     $pdf->Cell(140, 10, $customerName, 1, 1);
-    $pdf->Cell(50, 10, "Category:", 1);
+    $pdf->Cell(50, 10, "Item:", 1);
     $pdf->Cell(140, 10, $category, 1, 1);
     $pdf->Cell(50, 10, "Quantity:", 1);
     $pdf->Cell(140, 10, $quantity, 1, 1);
