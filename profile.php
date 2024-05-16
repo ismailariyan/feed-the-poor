@@ -34,12 +34,12 @@ if($_SESSION['name']==''){
         </div>
         <nav class="nav-bar">
             <ul>
-            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="home.html" >Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="campaign.html">Campaign</a></li>
           <li><a href="contact.html">Contact</a></li>
 
-          <li><a href="profile.php">Profile</a></li>
+          <li><a href="profile.php"class="active">Profile</a></li>
             </ul>
         </nav>
     </header>

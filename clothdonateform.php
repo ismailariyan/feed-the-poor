@@ -80,7 +80,7 @@ try {
      
        
         echo '<script type="text/javascript">alert("data saved")</script>';
-        header("location:delivery.php");
+        header("location:delivery.html");
         
     }
 
@@ -129,15 +129,15 @@ try {
         <div class="image-radio-group">
             <input type="radio" id="raw-food" name="image-choice" value="shirt">
             <label for="raw-food">
-              <img src="img/raw-food.png" alt="raw-food" >
+              <img src="img/rad.png" alt="shirt" >
             </label>
             <input type="radio" id="cooked-food" name="image-choice" value="lungi"checked>
             <label for="cooked-food">
-              <img src="img/cooked-food.png" alt="cooked-food" >
+              <img src="img/cked-food.png" alt="pant" >
             </label>
             <input type="radio" id="packed-food" name="image-choice" value="Sharee">
             <label for="packed-food">
-              <img src="img/packed-food.png" alt="packed-food" >
+              <img src="img/pad-food.png" alt="Frock" >
             </label>
           </div>
           <br>

@@ -42,7 +42,7 @@ if(isset($_POST['submit']))
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Sender
-        $mail->setFrom('obito.uchiha1184@gmail.com', 'Food Donation Platform');
+        $mail->setFrom('obito.uchiha1184@gmail.com', 'Sohaiwotar Dar');
         //Receiver
         $mail->addAddress($emailid, $name);     
 
@@ -59,7 +59,7 @@ if(isset($_POST['submit']))
             <p><b>Address:</b> $address</p>
             <p>We truly appreciate your support!</p>
             <p>Best regards,</p>
-            <p>Food Donation Platform</p>
+            <p>Sohaiwotar Dar</p>
         ";
        
         $mail->send();
@@ -86,7 +86,7 @@ if(isset($_POST['submit']))
     <div class="container">
         <div class="regformf">
             <form action="" method="post">
-                <p class="logo">Food <b style="color: #06C167;">Donate</b></p>
+                <p class="logo">সহায়তার <b style="color: #06C167;">দ্বার</b></p>
                 <div class="input">
                     <!-- Removed Food Name field -->
                 </div>
@@ -98,15 +98,15 @@ if(isset($_POST['submit']))
                     <div class="image-radio-group">
                         <input type="radio" id="gorur-tehari" name="image-choice" value="Gorur Tehari" required>
                         <label for="gorur-tehari">
-                            <img src="img/gorur-tehari.png" alt="Gorur Tehari">
+                            <img src="img/gorur-tehari.jpg" alt="Gorur Tehari">
                         </label>
                         <input type="radio" id="khicuri" name="image-choice" value="Khicuri" checked>
                         <label for="khicuri">
-                            <img src="img/khicuri.png" alt="Khicuri">
+                            <img src="img/khicuri.jpg" alt="Khicuri">
                         </label>
                         <input type="radio" id="daal-vaaat" name="image-choice" value="Daal Vaaat">
                         <label for="daal-vaaat">
-                            <img src="img/daal-vaaat.png" alt="Daal Vaaat">
+                            <img src="img/dalbhat.jpg" alt="Daal Vaaat">
                         </label>
                     </div>
                     <br>
