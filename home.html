@@ -15,6 +15,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
   </head>
   <body>
     <header>
@@ -45,24 +51,14 @@
     </script>
     <div class="container">
       <div class="slider-wrapper">
-        <button id="prev-slide" class="slide-button material-icons">
+        <!-- <button id="prev-slide" class="slide-button material-icons">
           chevron_left
-        </button>
-        <ul class="image-list">
-          <img class="image-item" src="img/1.jpg" />
-          <img class="image-item" src="img/2.jpg" />
-          <img class="image-item" src="img/3.jpg" />
-          <img class="image-item" src="img/4.jpg" />
-          <img class="image-item" src="img/5.jpg" />
-          <img class="image-item" src="img/6.jpg" />
-          <img class="image-item" src="img/7.jpg" />
-          <img class="image-item" src="img/8.jpg" />
-          <img class="image-item" src="img/9.jpg" />
-          <img class="image-item" src="img/10.jpg" />
-        </ul>
+        </button> -->
+        <div id="swiper-container"></div>
+        <!-- 
         <button id="next-slide" class="slide-button material-icons">
           chevron_right
-        </button>
+        </button> -->
       </div>
       <div class="slider-scrollbar">
         <div class="scrollbar-track">
