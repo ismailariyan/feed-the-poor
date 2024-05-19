@@ -34,18 +34,6 @@ CREATE TABLE `user_feedback` (
   PRIMARY KEY (`feedback_id`)
 );
 
-CREATE TABLE `campaign` (
-  `f_id` INT NOT NULL AUTO_INCREMENT,
-  `img` VARCHAR(45) NULL,
-  `name` VARCHAR(45) NULL,
-  `type` VARCHAR(45) NULL,
-  `adminEmail` VARCHAR(45) NULL,
-  `capacity` INT NULL,
-  `time` VARCHAR(45) NULL,
-  `status` VARCHAR(45) NULL,
-  PRIMARY KEY (`f_id`)
-);
-
 CREATE TABLE `food_campaign` (
   `Fid` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -60,6 +48,13 @@ CREATE TABLE `food_campaign` (
   `phoneno` varchar(25) NOT NULL,
   `assigned_to` int(11) DEFAULT NULL,
   `delivery_by` int(11) DEFAULT NULL,
+  `img` VARCHAR(45) NULL,
+  `campaign_name` VARCHAR(45) NULL,
+  `adminEmail` VARCHAR(45) NULL,
+  `capacity` INT NULL,
+  `time` VARCHAR(45) NULL,
+  `status` VARCHAR(45) NULL,
+  `description` text DEFAULT NULL,
   PRIMARY KEY (`Fid`)
 );
 
@@ -75,6 +70,15 @@ CREATE TABLE `cloth_campaign` (
   `address` text DEFAULT NULL,
   `location` varchar(50) DEFAULT NULL,
   `phoneno` varchar(25) DEFAULT NULL,
+  `assigned_to` int(11) DEFAULT NULL,
+  `delivery_by` int(11) DEFAULT NULL,
+  `img` VARCHAR(45) NULL,
+  `campaign_name` VARCHAR(45) NULL,
+  `adminEmail` VARCHAR(45) NULL,
+  `capacity` INT NULL,
+  `time` VARCHAR(45) NULL,
+  `status` VARCHAR(45) NULL,
+  `description` text DEFAULT NULL,
   PRIMARY KEY (`Cid`)
 );
 
@@ -86,5 +90,12 @@ CREATE TABLE `money_campaign` (
   `date` datetime DEFAULT current_timestamp(),
   `payment_method` varchar(50) DEFAULT NULL,
   `message` text DEFAULT NULL,
+  `img` VARCHAR(45) NULL,
+  `campaign_name` VARCHAR(45) NULL,
+  `adminEmail` VARCHAR(45) NULL,
+  `capacity` INT NULL,
+  `time` VARCHAR(45) NULL,
+  `status` VARCHAR(45) NULL,
+  `description` text DEFAULT NULL,
   PRIMARY KEY (`Mid`)
 );
