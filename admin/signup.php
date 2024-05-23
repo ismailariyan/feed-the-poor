@@ -119,33 +119,34 @@ if(isset($_POST['sign']))
                         <!-- <label for="district">Location:</label> -->
                         <!-- <br> -->
                         <select id="district" name="district" style="padding:10px; padding-left: 20px;">
-                          <option value="chennai">Chennai</option>
-                          <option value="kancheepuram">Kancheepuram</option>
-                          <option value="thiruvallur">Thiruvallur</option>
-                          <option value="vellore">Vellore</option>
-                          <option value="tiruvannamalai">Tiruvannamalai</option>
-                          <option value="tiruvallur">Tiruvallur</option>
-                          <option value="tiruppur">Tiruppur</option>
-                          <option value="coimbatore">Coimbatore</option>
-                          <option value="erode">Erode</option>
-                          <option value="salem">Salem</option>
-                          <option value="namakkal">Namakkal</option>
-                          <option value="tiruchirappalli">Tiruchirappalli</option>
-                          <option value="thanjavur">Thanjavur</option>
-                          <option value="pudukkottai">Pudukkottai</option>
-                          <option value="karur">Karur</option>
-                          <option value="ariyalur">Ariyalur</option>
-                          <option value="perambalur">Perambalur</option>
-                          <option value="madurai" selected>Madurai</option>
-                          <option value="virudhunagar">Virudhunagar</option>
-                          <option value="dindigul">Dindigul</option>
-                          <option value="ramanathapuram">Ramanathapuram</option>
-                          <option value="sivaganga">Sivaganga</option>
-                          <option value="thoothukkudi">Thoothukkudi</option>
-                          <option value="tirunelveli">Tirunelveli</option>
-                          <option value="tiruppur">Tiruppur</option>
-                          <option value="tenkasi">Tenkasi</option>
-                          <option value="kanniyakumari">Kanniyakumari</option>
+                        <option value="dhaka">Dhaka</option>
+                      <option value="chittagong">Chittagong</option>
+                      <option value="sylhet">Sylhet</option>
+                      <option value="rajshahi">Rajshahi</option>
+                      <option value="khulna">Khulna</option>
+                      <option value="barisal">Barisal</option>
+                      <option value="rangpur">Rangpur</option>
+                      <option value="mymensingh">Mymensingh</option>
+                      <option value="comilla">Comilla</option>
+                      <option value="narayanganj">Narayanganj</option>
+                      <option value="gazipur">Gazipur</option>
+                      <option value="savar">Savar</option>
+                      <option value="tangail">Tangail</option>
+                      <option value="kishoreganj">Kishoreganj</option>
+                      <option value="manikganj">Manikganj</option>
+                      <option value="munshiganj">Munshiganj</option>
+                      <option value="faridpur">Faridpur</option>
+                      <option value="pabna">Pabna</option>
+                      <option value="bogra">Bogra</option>
+                      <option value="rajbari">Rajbari</option>
+                      <option value="natore">Natore</option>
+                      <option value="naogaon">Naogaon</option>
+                      <option value="joypurhat">Joypurhat</option>
+                      <option value="sirajganj">Sirajganj</option>
+                      <option value="dinajpur">Dinajpur</option>
+                      <option value="kurigram">Kurigram</option>
+                      <option value="lalmonirhat">Lalmonirhat</option>
+                      <option value="nilphamari">Nilphamari</option>
                         </select> 
                         
 

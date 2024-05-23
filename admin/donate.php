@@ -123,9 +123,34 @@ if($_SESSION['name']==''){
              <label for="location" class="logo">Select Location:</label>
              <!-- <br> -->
             <select id="location" name="location">
-               <option value="chennai">chennai</option>
-               <option value="madurai">madurai</option>
-               <option value="coimbatore">coimbatore</option>
+            <option value="dhaka">Dhaka</option>
+                      <option value="chittagong">Chittagong</option>
+                      <option value="sylhet">Sylhet</option>
+                      <option value="rajshahi">Rajshahi</option>
+                      <option value="khulna">Khulna</option>
+                      <option value="barisal">Barisal</option>
+                      <option value="rangpur">Rangpur</option>
+                      <option value="mymensingh">Mymensingh</option>
+                      <option value="comilla">Comilla</option>
+                      <option value="narayanganj">Narayanganj</option>
+                      <option value="gazipur">Gazipur</option>
+                      <option value="savar">Savar</option>
+                      <option value="tangail">Tangail</option>
+                      <option value="kishoreganj">Kishoreganj</option>
+                      <option value="manikganj">Manikganj</option>
+                      <option value="munshiganj">Munshiganj</option>
+                      <option value="faridpur">Faridpur</option>
+                      <option value="pabna">Pabna</option>
+                      <option value="bogra">Bogra</option>
+                      <option value="rajbari">Rajbari</option>
+                      <option value="natore">Natore</option>
+                      <option value="naogaon">Naogaon</option>
+                      <option value="joypurhat">Joypurhat</option>
+                      <option value="sirajganj">Sirajganj</option>
+                      <option value="dinajpur">Dinajpur</option>
+                      <option value="kurigram">Kurigram</option>
+                      <option value="lalmonirhat">Lalmonirhat</option>
+                      <option value="nilphamari">Nilphamari</option>
         
             </select>
                 <input type="submit" value="Get Details">
