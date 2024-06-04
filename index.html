@@ -1,116 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="home.css"> -->
-</head>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,700;0,800;1,400;1,600&display=swap');
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>সহায়তার দ্বার</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-
-    .logo{
-        padding-top: 30px;
-        font-size: 35px;
-        text-align: center;
-        font-family: 'Poppins', sans-serif;
-
-    }
-    .para{
-        text-align: center;
-        font-size: 30px;
-        font-family: 'Poppins', sans-serif;
-
-    }
-    a{
-        /* text-align: center; */
-        display: inline-block;
-  /* font-size: 1em; */
-  font-size: 20px;
-  background:#06C167;
-  padding: 10px 30px;
-  /* text-transform: uppercase; */
-  text-decoration: none;
-  font-weight: 500;
-  margin:10px auto 10px auto;
-  color: #fff;
-  letter-spacing: 2px;
-  transition: 0.2s;
-    }
-    a:hover {
-     letter-spacing: 6px;
-    }
-    .log{
-        /* width: 50%; */
-        margin: auto;
-        display:grid;
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
         align-items: center;
-        
-    
-        /* border: 1px solid black; */
-        /* align-items: center; */
-        
-    }
-    .add{
-        margin: auto;
-        display:inline-block;
-        align-items:center;
-        padding-left: 540px;
-    }
-    #delivery{
+        height: 100vh;
+        color: #333;
+      }
 
-    }
-    /* .log img{
-        margin: auto;
-        width: auto;
-        height: auto;
-    } */
+      .container {
+        text-align: center;
+        background: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
 
-@media only screen and (max-width: 768px) {
-    .logo{
-        font-size: 30px;
-        padding:50px 50px 20px 50px;
-    }
-    .para{
-        font-size: 20px;
-    }
-    a{
+      .logo {
+        font-size: 35px;
+        margin-bottom: 10px;
+        color: #06c167;
+        font-weight: 600;
+      }
+
+      .para {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: 500;
+      }
+
+      a {
+        display: inline-block;
         font-size: 18px;
-    }
-    .add{
-        margin: auto;
-        display:inline-block;
-        align-items:center;
-        padding-left: 30px;
-    }
-}
-</style>
-<body>
-    <p class="logo"> Welcome to Food <b style="color: #06C167; ">Donate</b></p>
-    <p class="para"> Login as</p>
-<div class="log">
-    <!-- <img src="userlog.jpg" alt=""> -->
-    <a href="signup.php">User </a>
-    <a href="admin/signup.php">Admin</a>
-    <i class="fa-solid fa-moped"></i>
- 
-    <!-- <a href="delivery/deliverysignup.php" id="delivery">    <i class="fa-regular fa-moped"></i> Delivery</a> -->
-   
-  
-</div>
+        background: #06c167;
+        padding: 10px 30px;
+        text-decoration: none;
+        font-weight: 500;
+        margin: 10px;
+        color: #fff;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
 
-<div class="add">
- 
-</div>
+      a:hover {
+        background: #04a357;
+      }
 
+      .log {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
 
-    
-</body>
+      @media only screen and (max-width: 768px) {
+        .logo {
+          font-size: 28px;
+        }
+
+        .para {
+          font-size: 20px;
+        }
+
+        a {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+
+        .log {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="logo">সহায়তার <b style="color: #06c167">দ্বার</b></p>
+      <p class="para">Login as</p>
+      <div class="log">
+        <a href="signin.php">User</a>
+        <a href="admin/signin.php">Admin</a>
+        <!-- <a href="delivery/deliverysignup.php" id="delivery"
+          ><i class="fa-solid fa-moped"></i> Delivery</a
+        > -->
+      </div>
+    </div>
+  </body>
 </html>
