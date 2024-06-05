@@ -22,11 +22,10 @@ if($_SESSION['name']==''){
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
 </head>
 <body>
 <header>
-        <div class="logo">Food <b style="color: #06C167;">Donate</b></div>
+        <div class="logo">সহায়তার  <b style="color: #06C167;">দ্বার</b></div>
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
