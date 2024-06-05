@@ -34,24 +34,26 @@ if (!$connection) {
     class PDF extends FPDF {
         // Page header
         function Header() {
-            // Select Arial bold 15
-            $this->SetFont('Arial', 'B', 15);
-            // Move to the right
-            $this->Cell(80);
-            // Framed title
-            $this->Cell(30, 10, 'Invoice', 0, 0, 'C');
-            // Line break
+            // সহায়তার দ্বার
+            $this->SetFont('Arial', 'B', 30); // Doubled the font size
+            $this->Cell(0, 20, 'Sohaiyotar Dar', 0, 1, 'C');
             $this->Ln(20);
+
+            // Add image watermark
+            $this->Image('img/semi_transparent_icon.png', 30, 80, 150); // Adjust the dimensions accordingly
         }
 
         // Page footer
         function Footer() {
             // Position at 1.5 cm from bottom
-            $this->SetY(-15);
-            // Arial italic 8
-            $this->SetFont('Arial', 'I', 8);
+            $this->SetY(-40);
+            // Arial italic 16 (doubled the font size)
+            $this->SetFont('Arial', 'I', 14);
+            // Contact information
+            $this->Cell(0, 10, 'Contact: (+880) 1707564128 | sohaiyotar.dar2428@gmail.com', 0, 1, 'C');
+            $this->Cell(0, 10, 'Website: sohaiyotardar.org | Social: @sohaiyotar.dar', 0, 1, 'C');
             // Page number
-            $this->Cell(0, 10, 'Page ' . $this->PageNo(), 0, 0, 'C');
+           
         }
     }
 
@@ -59,7 +61,7 @@ if (!$connection) {
     $pdf->AddPage();
 
     // Set font
-    $pdf->SetFont('Arial', '', 12);
+    $pdf->SetFont('Arial', '', 24); // Doubled the font size
 
     // Fetch details from the query result
     $customerName = $row['name'];
@@ -69,21 +71,21 @@ if (!$connection) {
     $address = $row['address'];
 
     // Output invoice details
-    $pdf->SetFont('Arial', 'B', 14);
-    $pdf->Cell(0, 10, "Invoice Details", 0, 1, "C");
-    $pdf->Ln(10);
+    $pdf->SetFont('Arial', 'B', 28); // Doubled the font size
+    $pdf->Cell(0, 20, "Invoice Details", 0, 1, "C");
+    $pdf->Ln(20);
 
-    $pdf->SetFont('Arial', '', 12);
-    $pdf->Cell(50, 10, "Customer Name:", 1);
-    $pdf->Cell(140, 10, $customerName, 1, 1);
-    $pdf->Cell(50, 10, "Item:", 1);
-    $pdf->Cell(140, 10, $category, 1, 1);
-    $pdf->Cell(50, 10, "Quantity:", 1);
-    $pdf->Cell(140, 10, $quantity, 1, 1);
-    $pdf->Cell(50, 10, "Date:", 1);
-    $pdf->Cell(140, 10, $date, 1, 1);
-    $pdf->Cell(50, 10, "Address:", 1);
-    $pdf->Cell(140, 10, $address, 1, 1);
+    $pdf->SetFont('Arial', '', 24); // Doubled the font size
+    $pdf->Cell(50, 20, "Name:", 1);
+    $pdf->Cell(140, 20, $customerName, 1, 1);
+    $pdf->Cell(50, 20, "Item:", 1);
+    $pdf->Cell(140, 20, $category, 1, 1);
+    $pdf->Cell(50, 20, "Quantity:", 1);
+    $pdf->Cell(140, 20, $quantity, 1, 1);
+    $pdf->Cell(50, 20, "Date:", 1);
+    $pdf->Cell(140, 20, $date, 1, 1);
+    $pdf->Cell(50, 20, "Address:", 1);
+    $pdf->Cell(140, 20, $address, 1, 1);
 
     // Output the PDF
     $pdf->Output();
