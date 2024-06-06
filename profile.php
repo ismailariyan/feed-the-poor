@@ -154,6 +154,17 @@ if($_SESSION['name']==''){
              }
           }
        ?> 
+       <?php
+        $email=$_SESSION['email'];
+        $query="select * from kid_donate where email='$email'";
+        $result=mysqli_query($connection, $query);
+        if($result==true){
+            while($row=mysqli_fetch_assoc($result)){
+                echo "<tr><td>".$row['category']."</td><td>".$row['date']."</td><td>".$row['quantity']."</td></tr>";
+
+             }
+          }
+       ?> 
     
         </tbody>
     </table>
