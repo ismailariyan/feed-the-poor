@@ -520,7 +520,7 @@ header {
   background-image: var(--background-url);
   background-size: cover;
   background-position: center;
-  filter: blur(20px);
+  filter: blur(10px);
   z-index: -1;
 }
 .swiper-slide {
@@ -532,7 +532,7 @@ header {
 .swiper-slide img {
   max-height: 100vh;
   width: auto;
-  height: auto;
+  height: 800px;
 }
 .swiper-slide .swiper-slide-content {
   display: flex;

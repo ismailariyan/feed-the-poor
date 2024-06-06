@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>সহায়তার দ্বার</title>
+    <!-- Font Awesome CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -17,6 +18,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Google Fonts -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
@@ -41,8 +43,18 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
+      .container img {
+        /* Ensure the height matches the width to make a circle */
+        /* Makes the image circular */
+        border: 5px solid green; /* Adds a solid green border */
+        object-fit: cover; /* Ensures the image covers the area without distortion */
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
       .logo {
-        font-size: 35px;
+        font-size: 45px;
         margin-bottom: 10px;
         color: #06c167;
         font-weight: 600;
@@ -78,7 +90,12 @@
         gap: 20px;
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1000px) {
+        .container img {
+          width: 80px; /* Adjust the width for smaller screens */
+          height: 80px; /* Ensure the height matches the width to make a circle */
+        }
+
         .logo {
           font-size: 28px;
         }
@@ -100,14 +117,21 @@
   </head>
   <body>
     <div class="container">
-      <p class="logo">সহায়তার <b style="color: #06c167">দ্বার</b></p>
+      <!-- Logo Image -->
+      <img src="img/icon.png" alt="Logo" />
+      <!-- Site Title -->
+      <p class="logo">
+        <b style="color: green">সহায়তার </b>
+        <b style="color: #06c167">দ্বার</b>
+      </p>
+      <!-- Login Prompt -->
       <p class="para">Login as</p>
+      <!-- Login Links -->
       <div class="log">
         <a href="signin.php">User</a>
         <a href="admin/signin.php">Admin</a>
-        <!-- <a href="delivery/deliverysignup.php" id="delivery"
-          ><i class="fa-solid fa-moped"></i> Delivery</a
-        > -->
+        <!-- Uncomment the line below if needed -->
+        <!-- <a href="delivery/deliverysignup.php" id="delivery"><i class="fa-solid fa-moped"></i> Delivery</a> -->
       </div>
     </div>
   </body>
