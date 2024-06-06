@@ -129,15 +129,15 @@ try {
         <div class="image-radio-group">
             <input type="radio" id="raw-food" name="image-choice" value="shirt">
             <label for="raw-food">
-              <img src="img/shirt" alt="shirt" >
+              <img src="img/form/7.png" alt="shirt" >
             </label>
             <input type="radio" id="cooked-food" name="image-choice" value="lungi"checked>
             <label for="cooked-food">
-              <img src="img/cked-food.png" alt="lungi" >
+              <img src="img/form/8.png" alt="lungi" >
             </label>
             <input type="radio" id="packed-food" name="image-choice" value="Sharee">
             <label for="packed-food">
-              <img src="img/pad-food.png" alt="Sharee" >
+              <img src="img/form/9.png" alt="Sharee" >
             </label>
           </div>
           <br>

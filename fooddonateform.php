@@ -98,15 +98,15 @@ if(isset($_POST['submit']))
                     <div class="image-radio-group">
                         <input type="radio" id="gorur-tehari" name="image-choice" value="Gorur Tehari" required>
                         <label for="gorur-tehari">
-                            <img src="img/gorur-tehari.jpg" alt="Gorur Tehari">
+                            <img src="img/form/10.png" alt="Gorur Tehari">
                         </label>
                         <input type="radio" id="khicuri" name="image-choice" value="Khicuri" checked>
                         <label for="khicuri">
-                            <img src="img/khicuri.jpg" alt="Khicuri">
+                            <img src="img/form/11.png" alt="Khicuri">
                         </label>
                         <input type="radio" id="daal-vaaat" name="image-choice" value="Daal Vaaat">
                         <label for="daal-vaaat">
-                            <img src="img/dalbhat.jpg" alt="Daal Vaaat">
+                            <img src="img/form/12.png" alt="Daal Vaaat">
                         </label>
                     </div>
                     <br>

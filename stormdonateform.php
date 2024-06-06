@@ -106,45 +106,29 @@ try {
     <form action="" method="post">
         <p class="logo">  <b style="color: #06C167; ">দান</b></p>
         
-       <!-- <div class="input">
-        <label for="foodname"  > Food Name:</label>
-        <input type="text" id="foodname" name="foodname" required/>
-        </div> -->
-      
-      
-        <!-- <div class="radio">
-        <label for="meal" >Meal type :</label> 
-        <br><br>
 
-        <input type="radio" name="meal" id="veg" value="veg" required/>
-        <label for="veg" style="padding-right: 40px;">Veg</label>
-        <input type="radio" name="meal" id="Non-veg" value="Non-veg" >
-        <label for="Non-veg">Non-veg</label>
-    
-        </div>
-        <br> -->
         <div class="input">
         <label for="food">Select the Currency:</label>
         <br><br>
         <div class="image-radio-group">
             <input type="radio" id="raw-food" name="image-choice" value="Taka">
             <label for="raw-food">
-              <img src="img/shirt" alt="Taka" >
+              <img src="img/form/4.png" alt="Taka" >
             </label>
             <input type="radio" id="cooked-food" name="image-choice" value="Dollar"checked>
             <label for="cooked-food">
-              <img src="img/cked-food.png" alt="Dollar" >
+              <img src="img/form/5.png" alt="Dollar" >
             </label>
             <input type="radio" id="packed-food" name="image-choice" value="Euro">
             <label for="packed-food">
-              <img src="img/pad-food.png" alt="Euro" >
+              <img src="img/form/6.png" alt="Euro" >
             </label>
           </div>
           <br>
         <!-- <input type="text" id="food" name="food"> -->
         </div>
         <div class="input">
-        <label for="quantity">Quantity:</label>
+        <label for="quantity">Amount:</label>
         <input type="number" id="quantity" name="quantity" required/>
         
         </div>
