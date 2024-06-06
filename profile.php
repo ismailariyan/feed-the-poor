@@ -110,7 +110,7 @@ if($_SESSION['name']==''){
         <table class="table">
         <thead>
         <tr>
-            <th>food</th>
+            <th>Category</th>
             <!-- <th>Type</th>
             <th>Category</th> -->
 
