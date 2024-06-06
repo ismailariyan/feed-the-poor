@@ -21,7 +21,16 @@ if($_SESSION['name']==''){
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+ <style>
+.table-container {
+  padding: 0;
+  margin: 20px auto 10px;
+  /* border: 1px solid ; */
+  box-shadow: ;
+  /* border-radius: 10px; */
+  background-color: whitesmoke;
+}
+ </style>
 </head>
 <body>
 <header>
@@ -115,6 +124,17 @@ if($_SESSION['name']==''){
          <?php
         $email=$_SESSION['email'];
         $query="select * from food_donations where email='$email'";
+        $result=mysqli_query($connection, $query);
+        if($result==true){
+            while($row=mysqli_fetch_assoc($result)){
+                echo "<tr><td>".$row['category']."</td><td>".$row['date']."</td><td>".$row['quantity']."</td></tr>";
+
+             }
+          }
+       ?> 
+        <?php
+        $email=$_SESSION['email'];
+        $query="select * from cloth_storage where email='$email'";
         $result=mysqli_query($connection, $query);
         if($result==true){
             while($row=mysqli_fetch_assoc($result)){

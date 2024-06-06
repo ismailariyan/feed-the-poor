@@ -17,7 +17,11 @@ body {
   width: 700px;
   height: 900px;
   margin: 20px auto;
-  border: solid 5px green;
+  border: radial-gradient(
+    759px at 14% 22.3%,
+    rgb(10, 64, 88) 0%,
+    rgb(15, 164, 102) 90%
+  );
   border-radius: 5px;
 
   /* background-color:rgba(90, 255, 208, 0.713); */
@@ -40,6 +44,7 @@ body {
   /* border: 1px solid ; */
   box-shadow: ;
   /* border-radius: 10px; */
+  background-color: bisque;
 }
 
 .table {
@@ -73,7 +78,6 @@ td {
   vertical-align: top;
 }
 
-/* for phone */
 @media (max-width: 767px) {
   .cover {
     width: auto;

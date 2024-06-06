@@ -43,6 +43,27 @@
         </ul>
       </nav>
     </header>
+    <style>
+      .text-box {
+        font-weight: 500;
+        border: 2.5px solid #ddd;
+        padding: 40px;
+        border-radius: 8px;
+        margin: 20px;
+        text-align: justify;
+        font-size: 23px;
+        background-color: radial-gradient(
+          759px at 14% 22.3%,
+          rgb(10, 64, 88) 0%,
+          rgb(15, 164, 102) 90%
+        );
+      }
+      @media (max-width: 767px) {
+        .text-box {
+          font-size: 16px;
+        }
+      }
+    </style>
     <script>
       hamburger = document.querySelector(".hamburger");
       hamburger.onclick = function () {
@@ -74,7 +95,7 @@
       <!-- <h2>Love Food</h2>
         <h3>Hate Wasting</h3> -->
 
-      <div class="slogan">
+      <div class="text-box">
         “মানবতার আলোকে - এক স্পন্দন, অসীম সহায়তা আমরা মানুষের অন্যের কাছে
         সহায়তা আর্জন করার জন্য একটি প্লাটফর্ম প্রদান করি। আমরা নিশ্চিত করি
         যেকেউ প্রয়োজনে হলে সহায়তা পেতে পারে। সহায়তা ছাড়া এক জীবন
