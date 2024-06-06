@@ -37,7 +37,7 @@ if(isset($_POST['submit']))
    
     
   
-    $query="insert into cloth_storage(email,category,phoneno,location,address,name,quantity) values('$emailid','$category','$phoneno','$district','$address','$name','$quantity')";
+    $query="insert into storm_donate(email,category,phoneno,location,address,name,quantity) values('$emailid','$category','$phoneno','$district','$address','$name','$quantity')";
     
     $query_run= mysqli_query($connection, $query);
   
@@ -69,8 +69,8 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Cloth Donation';
-    $mail->Body    = 'Thanks for donation cloths';
+    $mail->Subject = 'Donation';
+    $mail->Body    = 'Thank you for donating money.You have donated amount is:  ';
    
     $mail->send();
     echo 'Message has been sent';
@@ -80,7 +80,7 @@ try {
      
        
         echo '<script type="text/javascript">alert("data saved")</script>';
-        header("location:deliveryforcloth.php");
+        header("location:generatepdfforstorm.php");
         
     }
 
@@ -104,7 +104,7 @@ try {
     <div class="container">
         <div class="regformf" >
     <form action="" method="post">
-        <p class="logo">কাপড়  <b style="color: #06C167; ">দান</b></p>
+        <p class="logo">  <b style="color: #06C167; ">দান</b></p>
         
        <!-- <div class="input">
         <label for="foodname"  > Food Name:</label>
@@ -124,20 +124,20 @@ try {
         </div>
         <br> -->
         <div class="input">
-        <label for="food">Select the Category:</label>
+        <label for="food">Select the Currency:</label>
         <br><br>
         <div class="image-radio-group">
-            <input type="radio" id="raw-food" name="image-choice" value="shirt">
+            <input type="radio" id="raw-food" name="image-choice" value="Taka">
             <label for="raw-food">
-              <img src="img/shirt" alt="shirt" >
+              <img src="img/shirt" alt="Taka" >
             </label>
-            <input type="radio" id="cooked-food" name="image-choice" value="lungi"checked>
+            <input type="radio" id="cooked-food" name="image-choice" value="Dollar"checked>
             <label for="cooked-food">
-              <img src="img/cked-food.png" alt="lungi" >
+              <img src="img/cked-food.png" alt="Dollar" >
             </label>
-            <input type="radio" id="packed-food" name="image-choice" value="Sharee">
+            <input type="radio" id="packed-food" name="image-choice" value="Euro">
             <label for="packed-food">
-              <img src="img/pad-food.png" alt="Sharee" >
+              <img src="img/pad-food.png" alt="Euro" >
             </label>
           </div>
           <br>
