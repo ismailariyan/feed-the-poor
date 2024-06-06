@@ -68,10 +68,10 @@ if($_SESSION['name']==''){
                     <i class="uil uil-comments"></i>
                     <span class="link-name">Feedbacks</span>
                 </a></li>
-                <li><a href="adminprofile.php">
+                <!-- <li><a href="adminprofile.php">
                     <i class="uil uil-user"></i>
                     <span class="link-name">Profile</span>
-                </a></li>
+                </a></li> -->
                 <!-- <li><a href="#">
                     <i class="uil uil-share"></i>
                     <span class="link-name">Share</span>

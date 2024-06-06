@@ -44,10 +44,10 @@ $db = mysqli_select_db($connection, 'demo');
                     <i class="uil uil-comments"></i>
                     <span class="link-name">Feedbacks</span>
                 </a></li>
-                <li><a href="adminprofile.php">
+                <!-- <li><a href="adminprofile.php">
                     <i class="uil uil-user"></i>
                     <span class="link-name">Profile</span>
-                </a></li>
+                </a></li> -->
             </ul>
             <ul class="logout-mode">
                 <li><a href="../logout.php">
